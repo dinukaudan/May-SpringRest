@@ -2,6 +2,7 @@ package com.udan.demo.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -43,6 +44,23 @@ public class UserController {
 		}
 		return null;
 	}
+	
+	public User deleteOne( int userId) {
+		Iterator<User> iterator=userList.iterator();
+		while (iterator.hasNext()) {
+			User user = (User) iterator.next();
+			if (user.getId()==userId) {
+				iterator.remove();
+				return null;
+			
+			}
+			
+		}
+		
+		
+		return null;
+	}
+	
 	
 	public User saveUser( User user) {
 		if(user.getId()==null) {
