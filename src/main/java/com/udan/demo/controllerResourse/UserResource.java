@@ -31,7 +31,7 @@ public class UserResource {
 	public User findone(@PathVariable int id) {
 		User userf=userController.findOne(id);
 		if(userf==null) {
-			throw new UserNotFoundException("id : "+id);
+			throw new UserNotFoundException("id : "+id+"shala lala laa haii shalala in the evening");
 			
 		}
 		return  userf;
